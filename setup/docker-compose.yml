@@ -4,13 +4,15 @@ services:
     image: gitlab/gitlab-ce:latest
     container_name: gitlab
     restart: always
-    hostname: 'gitlab.example.com'
+    hostname: 'mlops-gitlab'
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        # Add any other gitlab.rb configuration here, each on its own line
-        external_url 'https://gitlab.example.com'
+        external_url 'http://XX.XXX.XX.XXX'
+        gitlab_rails['time_zone'] = 'Asia/Tokyo'
+        gitlab_rails['gitlab_email_from'] = 'gitlab@example.com'
+        gitlab_rails['initial_root_password'] = 'g1tl@b241007'
     ports:
-      - '80:22'
+      - '80:80'
     volumes:
       - '$GITLAB_HOME/config:/etc/gitlab'
       - '$GITLAB_HOME/logs:/var/log/gitlab'
