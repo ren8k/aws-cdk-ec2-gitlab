@@ -90,6 +90,7 @@ VPC, Subnet, Security Group, ALB, EFS, ECS を利用する．
 
 <guidelines>
 
+- 日本語で回答すること．
 - リソースの依存関係を考慮して，リソースを作成する順番を決定
 - リソースの作成順序を考慮して，CDK スタックを実装
 - ハードコーディングは避け，パラメータ化
@@ -105,7 +106,10 @@ VPC, Subnet, Security Group, ALB, EFS, ECS を利用する．
 guidelines タグに記載された内容をステップバイステップで検討
 </thinking>
 <output>
-最終的な CDK スタックの TypeScript の実装
+CDK スタックの TypeScript の実装
 </output>
+<final_output>
+aws_resources タグや guidelines タグ内の条件に従っているかを確認する．例えば，ハードコーディングしている場合は修正すること．その上で，最終的なCDK スタックの TypeScript の実装を示す．
+</final_output>
 </rules>
 </instruction>
